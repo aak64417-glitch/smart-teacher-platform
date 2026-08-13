@@ -1,0 +1,10 @@
+{
+  "name": "منصة المعلم الذكي",
+  "short_name": "المعلم الذكي",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f4f7fb",
+  "theme_color": "#2864e8",
+  "lang": "ar",
+  "dir": "rtl"
+}

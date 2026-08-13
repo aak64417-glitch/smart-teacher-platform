@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>منصة المعلم الذكي — الإصدار المتقدم</title>
+<style>
+:root{--bg:#f4f7fb;--card:#fff;--text:#172033;--muted:#718096;--primary:#2864e8;--primary2:#6847e8;--line:#e5eaf2;--good:#18a86b;--warn:#e9a52b;--bad:#e85454}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font-family:Tahoma,Arial,sans-serif}.app{display:flex;min-height:100vh}.side{position:fixed;right:0;top:0;bottom:0;width:275px;background:#101c32;color:#fff;padding:18px;overflow:auto}.brand{font-size:20px;font-weight:800;padding:10px 6px 22px;border-bottom:1px solid #ffffff1c}.brand small{display:block;color:#9fb2d2;font-size:11px;margin-top:5px}.nav{margin-top:14px}.nav button{width:100%;border:0;background:transparent;color:#d8e1f1;text-align:right;padding:11px 12px;border-radius:10px;margin:2px 0;cursor:pointer;font-family:inherit}.nav button:hover,.nav button.active{background:#2864e8;color:#fff}.main{margin-right:275px;width:calc(100% - 275px);padding:22px;max-width:1600px}.top{display:flex;align-items:center;gap:12px;margin-bottom:18px}.search{flex:1}.search input{margin:0}.profile{background:white;border:1px solid var(--line);padding:10px 14px;border-radius:12px;white-space:nowrap}.panel{display:none}.panel.active{display:block}h1{margin:0;font-size:26px}h2{font-size:18px;margin:0 0 13px}.muted{color:var(--muted)}.card{background:var(--card);border:1px solid var(--line);border-radius:15px;padding:17px;box-shadow:0 5px 18px #14213d09}.hero{display:grid;grid-template-columns:1.3fr .7fr;gap:14px}.welcome{background:linear-gradient(135deg,#2464e9,#6949df);color:white}.welcome .muted{color:#dce5ff}.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:13px}.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:13px}.metric{font-size:27px;font-weight:800;margin:7px 0}.section{margin-top:16px}.tools{display:grid;grid-template-columns:repeat(6,1fr);gap:10px}.tool{border:1px solid var(--line);background:#fff;border-radius:12px;padding:14px 9px;text-align:center;cursor:pointer}.tool:hover{border-color:#9ab7fa;transform:translateY(-1px)}.tool .ico{font-size:23px}.two{display:grid;grid-template-columns:1fr 1fr;gap:14px}.three{display:grid;grid-template-columns:1.1fr .9fr 1fr;gap:14px}.bar{height:9px;background:#edf1f7;border-radius:20px;overflow:hidden}.bar i{display:block;height:100%;background:linear-gradient(90deg,#2864e8,#6d4ce8);border-radius:20px}.row{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:11px 0}.badge{padding:4px 9px;border-radius:20px;font-size:11px;background:#e9f8f1;color:#14865b}.warn{background:#fff4df;color:#a76a08}.bad{background:#ffe8e8;color:#b83c3c}.list div{padding:10px 0;border-bottom:1px solid var(--line)}table{width:100%;border-collapse:collapse}th,td{padding:11px;border-bottom:1px solid var(--line);text-align:right}th{font-size:12px;color:var(--muted)}input,select,textarea{width:100%;padding:11px;border:1px solid #d8dfeb;border-radius:9px;font-family:inherit;margin:5px 0 10px}textarea{min-height:100px}.formgrid{display:grid;grid-template-columns:1fr 1fr;gap:12px}.btn{border:0;background:var(--primary);color:white;padding:10px 15px;border-radius:9px;cursor:pointer;font-weight:700}.btn.light{background:#edf3ff;color:#2864e8}.result{background:#f7f9fd;border:1px solid var(--line);border-radius:11px;padding:15px;line-height:1.9;white-space:pre-wrap}.tabs{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:12px}.tabs button{border:1px solid var(--line);background:white;padding:8px 12px;border-radius:20px;cursor:pointer}.tabs button.active{background:#2864e8;color:#fff}.modal{position:fixed;inset:0;background:#07122699;display:none;align-items:center;justify-content:center;padding:20px;z-index:10}.modal.open{display:flex}.modalbox{background:white;border-radius:18px;width:min(720px,100%);padding:20px;max-height:90vh;overflow:auto}.close{float:left;border:0;background:#f1f3f7;border-radius:8px;padding:7px 11px;cursor:pointer}.chips{display:flex;gap:7px;flex-wrap:wrap}.chip{background:#eef3ff;color:#285fc9;padding:6px 9px;border-radius:20px;font-size:12px}.footer{margin-top:18px;text-align:center;color:var(--muted);font-size:12px}
+@media(max-width:1100px){.grid5{grid-template-columns:repeat(3,1fr)}.tools{grid-template-columns:repeat(3,1fr)}.hero,.three{grid-template-columns:1fr}.grid4{grid-template-columns:repeat(2,1fr)}}@media(max-width:760px){.side{position:relative;width:100%;height:auto}.app{display:block}.main{margin:0;width:100%}.top{flex-wrap:wrap}.search{order:3;flex-basis:100%}.grid5,.grid4,.two,.formgrid{grid-template-columns:1fr}.tools{grid-template-columns:repeat(2,1fr)}}
+</style>
+<link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#2864e8"><meta name="mobile-web-app-capable" content="yes"><script src="https://cdn.sheetjs.com/xlsx-0.20.3/package/dist/xlsx.full.min.js"></script></head>
+<body>
+<div class="app">
+<aside class="side">
+<div class="brand">🤖 منصة المعلم الذكي<small>تعليم ذكي • تخطيط • تقويم • تحليل • تعلم شخصي</small></div>
+<div class="nav">
+<button class="active" data-page="home">🏠 الرئيسية</button>
+<button data-page="planner">🧠 التخطيط الذكي</button>
+<button data-page="content">📚 المحتوى التعليمي</button>
+<button data-page="assessment">📝 الاختبارات والتقويم</button>
+<button data-page="students">👥 الطلاب والفصول</button>
+<button data-page="attendance">🟢 الحضور والغياب</button>
+<button data-page="activities">🎮 الأنشطة والألعاب</button>
+<button data-page="differentiation">🎯 التعليم المتمايز</button>
+<button data-page="ai">✨ المساعد الذكي</button>
+<button data-page="analytics">📊 التحليلات والتنبؤ</button>
+<button data-page="calendar">📅 التقويم والمهام</button>
+<button data-page="library">📖 المكتبة الرقمية</button>
+<button data-page="reports">📄 التقارير والشهادات</button>
+<button data-page="communication">💬 التواصل</button>
+<button data-page="talent">⭐ الموهبة وSTEM</button>
+<button data-page="development">👨‍🏫 التطوير المهني</button>
+<button data-page="settings">⚙️ الإعدادات والصلاحيات</button>
+</div>
+</aside>
+
+<main class="main">
+<div class="top"><div class="profile">👨‍🏫 أ. علي طاهر البقاشي<br><small class="muted">معلم علوم • ثالث متوسط</small></div><div class="search"><input id="globalSearch" placeholder="ابحث عن درس، طالب، محتوى، اختبار أو ميزة..."></div><button class="btn" onclick="openModal('تنبيه سريع','تم تفعيل مركز المساعدة الذكي في النموذج التجريبي.')">🔔 3</button></div>
+
+<section id="home" class="panel active">
+<div class="hero">
+<div class="card welcome"><h1>مرحبًا بك 👋</h1><p class="muted">هذه لوحة القيادة الموحدة لإدارة دورة التعليم كاملة.</p><div class="grid4"><div><small>حصص اليوم</small><div class="metric">4</div></div><div><small>الطلاب</small><div class="metric">32</div></div><div><small>المهام</small><div class="metric">7</div></div><div><small>الإتقان</small><div class="metric">86%</div></div></div></div>
+<div class="card"><h2>🤖 تنبيهات ذكية</h2><div class="list"><div>⚠️ 7 طلاب يحتاجون تدخلًا علاجيًا.</div><div>📈 ارتفاع الإتقان في أسلوب العلم.</div><div>⭐ 5 طلاب مؤهلون للإثراء.</div><div>📝 اختبار قصير يحتاج تصحيحًا.</div></div></div>
+</div>
+<div class="section"><h2>⚡ أدوات سريعة</h2><div class="tools">
+<div class="tool" onclick="go('planner')">🧠<div>خطة درس</div></div><div class="tool" onclick="go('content')">🎬<div>فيديو تعليمي</div></div><div class="tool" onclick="go('content')">📄<div>ورقة عمل</div></div><div class="tool" onclick="go('assessment')">📝<div>اختبار</div></div><div class="tool" onclick="go('activities')">🎮<div>لعبة</div></div><div class="tool" onclick="go('ai')">✨<div>اسأل AI</div></div><div class="tool" onclick="go('differentiation')">🎯<div>تمايز</div></div><div class="tool" onclick="go('analytics')">📊<div>تحليل النتائج</div></div><div class="tool" onclick="go('attendance')">🟢<div>الحضور</div></div><div class="tool" onclick="go('reports')">🏆<div>شهادة</div></div><div class="tool" onclick="go('library')">📖<div>مكتبة</div></div><div class="tool" onclick="go('talent')">⭐<div>موهبة</div></div></div></div>
+<div class="section grid5"><div class="card"><small>المهارات المتقنة</small><div class="metric">45</div><span class="badge">+6 هذا الأسبوع</span></div><div class="card"><small>نسبة الحضور</small><div class="metric">92%</div></div><div class="card"><small>الاختبارات المصححة</small><div class="metric">8</div></div><div class="card"><small>الواجبات المرسلة</small><div class="metric">12</div></div><div class="card"><small>متوسط التحصيل</small><div class="metric">78%</div><span class="badge">+6%</span></div></div>
+<div class="section three">
+<div class="card"><h2>📊 إتقان المهارات</h2><div class="row"><span>أسلوب العلم</span><b>92%</b></div><div class="bar"><i style="width:92%"></i></div><div class="row"><span>الحركة والتسارع</span><b>78%</b></div><div class="bar"><i style="width:78%"></i></div><div class="row"><span>قوانين نيوتن</span><b>65%</b></div><div class="bar"><i style="width:65%"></i></div><div class="row"><span>الزخم والتصادمات</span><b>58%</b></div><div class="bar"><i style="width:58%"></i></div></div>
+<div class="card"><h2>🧑‍🎓 الطلاب الذين يحتاجون دعمًا</h2><div class="row">سلمان محمد <span class="badge bad">45%</span></div><div class="row">علي السويلم <span class="badge warn">50%</span></div><div class="row">جاسم الحماد <span class="badge warn">55%</span></div><button class="btn light" onclick="go('students')">فتح ملف الطلاب</button></div>
+<div class="card"><h2>📅 حصص اليوم</h2><div class="list"><div>08:00 — علوم ثالث متوسط — أسلوب العلم</div><div>09:00 — علوم ثالث متوسط — الحركة</div><div>11:00 — علوم ثالث متوسط — قوانين نيوتن</div></div></div>
+</div>
+<div class="section two"><div class="card"><h2>✨ توصيات الذكاء الاصطناعي</h2><div class="list"><div>7 طلاب يحتاجون مراجعة مفهوم التسارع <button class="btn light" onclick="go('differentiation')">أنشئ علاجًا</button></div><div>5 طلاب جاهزون للإثراء <button class="btn light" onclick="go('talent')">أنشئ تحديًا</button></div><div>يفضل تنفيذ تقويم تكويني بعد النشاط القادم.</div></div></div><div class="card"><h2>🕒 آخر الأنشطة</h2><div class="list"><div>تم إنشاء اختبار قوانين نيوتن — منذ ساعتين</div><div>تم تحليل نتائج اختبار — منذ 4 ساعات</div><div>تم إنشاء نشاط تفاعلي — منذ 6 ساعات</div><div>تم رفع ورقة عمل — منذ يوم</div></div></div></div>
+</section>
+
+<section id="planner" class="panel"><h1>🧠 التخطيط الذكي</h1><p class="muted">أنشئ خطة مرتبطة بالأهداف والاستراتيجيات والتقويم والتمايز.</p><div class="card"><div class="formgrid"><div><label>المادة</label><input id="pSubject" value="العلوم"></div><div><label>الصف</label><input id="pGrade" value="ثالث متوسط"></div><div><label>عنوان الدرس</label><input id="pTopic" value="أسلوب العلم"></div><div><label>مدة الحصة</label><select id="pTime"><option>45 دقيقة</option><option>50 دقيقة</option><option>60 دقيقة</option></select></div></div><label>الاستراتيجية</label><select id="pStrategy"><option>التعلم بالاستقصاء</option><option>التعلم التعاوني</option><option>التعلم القائم على المشكلات</option><option>التعلم القائم على المشروع</option></select><button class="btn" onclick="plan()">✨ توليد خطة متكاملة</button></div><div class="section card"><div id="planResult" class="result">ستظهر الخطة هنا.</div></div></section>
+
+<section id="content" class="panel"><h1>📚 استوديو المحتوى</h1><div class="card"><div class="formgrid"><div><label>نوع المحتوى</label><select id="contentType"><option>عرض تقديمي</option><option>ورقة عمل</option><option>سيناريو فيديو</option><option>إنفوجرافيك</option><option>بطاقات مراجعة</option><option>درس رقمي</option></select></div><div><label>الموضوع</label><input id="contentTopic" value="أسلوب العلم"></div></div><label>تعليمات إضافية</label><textarea id="contentNotes" placeholder="مثال: مناسب لثالث متوسط، لغة عربية واضحة، يتضمن تجربة وتفكيرًا ناقدًا..."></textarea><button class="btn" onclick="generateContent()">✨ إنشاء المحتوى</button></div><div class="section card"><div id="contentResult" class="result">يمكن لاحقًا ربط هذه الوحدة بنموذج AI حقيقي وإخراج PowerPoint/PDF/فيديو.</div></div></section>
+
+<section id="assessment" class="panel"><h1>📝 الاختبارات والتقويم</h1><div class="card"><div class="formgrid"><div><label>الموضوع</label><input id="testTopic" value="قوانين نيوتن"></div><div><label>عدد الأسئلة</label><input id="testCount" type="number" value="10"></div><div><label>نوع الاختبار</label><select id="testType"><option>تكويني</option><option>قبلي</option><option>ختامي</option><option>علاجي</option><option>موهوبين</option></select></div><div><label>المستوى</label><select><option>متوازن</option><option>تفكير أعلى</option><option>سهل</option><option>متقدم</option></select></div></div><button class="btn" onclick="generateTest()">✨ بناء الاختبار + مفتاح الإجابة</button></div><div class="section card"><div id="testResult" class="result">يدعم التصميم المستقبلي جدول المواصفات، بنك الأسئلة، التصحيح الآلي، وتحليل كل سؤال.</div></div></section>
+
+<section id="students" class="panel">
+<h1>👥 إدارة الطلاب والفصول</h1>
+<p class="muted">إضافة فردية أو استيراد جماعي من Excel، مع ملف ذكي لكل طالب.</p>
+<div class="section grid4">
+<div class="card"><small>إجمالي الطلاب</small><div class="metric" id="studentTotal">0</div></div>
+<div class="card"><small>متوسط الإتقان</small><div class="metric" id="studentAvg">0%</div></div>
+<div class="card"><small>يحتاجون دعمًا</small><div class="metric" id="studentSupport">0</div></div>
+<div class="card"><small>للإثراء</small><div class="metric" id="studentEnrich">0</div></div></div>
+<div class="section card"><h2>➕ إضافة طالب</h2>
+<div class="formgrid"><div><label>اسم الطالب</label><input id="newStudentName"></div><div><label>رقم الطالب</label><input id="newStudentId"></div><div><label>الصف</label><input id="newStudentGrade" value="ثالث متوسط"></div><div><label>الفصل</label><select id="newStudentClass"><option>أ</option><option>ب</option><option>ج</option><option>د</option></select></div></div>
+<button class="btn" onclick="addStudent()">إضافة الطالب</button></div>
+<div class="section card"><h2>📥 استيراد الطلاب من Excel</h2>
+<p class="muted">الأعمدة: اسم الطالب، رقم الطالب، الصف، الفصل، الإتقان.</p>
+<input id="excelFile" type="file" accept=".xlsx,.xls,.csv">
+<button class="btn" onclick="importStudents()">استيراد الملف</button>
+<a class="btn light" href="نموذج_استيراد_طلاب.xlsx" download>⬇️ تحميل قالب Excel</a>
+<div id="importStatus" class="muted"></div></div>
+<div class="section card"><div class="row"><h2>📋 قائمة الطلاب</h2><input id="studentSearch" style="max-width:300px" placeholder="بحث..." oninput="renderStudents()"></div>
+<table><thead><tr><th>الطالب</th><th>الرقم</th><th>الصف</th><th>الفصل</th><th>الإتقان</th><th>التصنيف</th><th>إجراء</th></tr></thead><tbody id="studentsBody"></tbody></table></div>
+</section>
+
+<section id="attendance" class="panel"><h1>🟢 الحضور والغياب</h1><div class="card"><div class="grid4"><div><small>الحضور اليوم</small><div class="metric">92%</div></div><div><small>حاضر</small><div class="metric">29</div></div><div><small>غائب</small><div class="metric">2</div></div><div><small>متأخر</small><div class="metric">1</div></div></div><div class="section"><button class="btn" onclick="alert('تم تسجيل حضور تجريبي للصف')">تسجيل الحضور</button></div></div></section>
+
+<section id="activities" class="panel"><h1>🎮 مختبر الأنشطة والألعاب</h1><div class="tools"><div class="tool" onclick="openModal('مسابقة مباشرة','أنشئ 10 أسئلة مع نقاط وزمن وترتيب فوري.')">🏆<div>مسابقة</div></div><div class="tool" onclick="openModal('عجلة الأسئلة','اختر طالبًا وسؤالًا عشوائيًا.')">🎡<div>عجلة</div></div><div class="tool" onclick="openModal('مطابقة','مطابقة المصطلحات بالتعريفات بالسحب والإفلات.')">🧩<div>مطابقة</div></div><div class="tool" onclick="openModal('تجربة افتراضية','محاكاة تجربة مع متغيرات ونتائج.')">🧪<div>تجربة</div></div></div></section>
+
+<section id="differentiation" class="panel"><h1>🎯 التعليم المتمايز</h1><div class="three"><div class="card"><h2>🟢 دعم</h2><p>شرح مبسط، أمثلة، تلميحات، نشاط علاجي، تقويم قصير.</p></div><div class="card"><h2>🟡 مستوى الصف</h2><p>تطبيقات ومهام تعاونية وأسئلة فهم وتطبيق.</p></div><div class="card"><h2>⭐ إثراء</h2><p>تحديات مفتوحة، STEM، بحث واستقصاء وتفكير ناقد.</p></div></div><div class="section card"><button class="btn" onclick="openModal('إنشاء مسارات متمايزة','تم إعداد ثلاثة مسارات للدرس الحالي بناءً على مستوى الإتقان.')">✨ توليد المسارات</button></div></section>
+
+<section id="ai" class="panel"><h1>✨ المساعد الذكي للمعلم</h1><div class="card"><p>اكتب طلبك وسيولد النظام استجابة تعليمية أولية قابلة للمراجعة.</p><div class="chips"><span class="chip" onclick="aiPrompt('جهز لي خطة درس')">خطة درس</span><span class="chip" onclick="aiPrompt('أعطني أسئلة تفكير عليا')">تفكير أعلى</span><span class="chip" onclick="aiPrompt('حلل نتائج الطلاب')">تحليل النتائج</span><span class="chip" onclick="aiPrompt('اقترح نشاطًا')">نشاط</span></div><textarea id="aiInput" placeholder="مثال: أنشئ نشاطًا استقصائيًا عن قوانين نيوتن مدته 10 دقائق..."></textarea><button class="btn" onclick="askAI()">اسأل المساعد</button><div class="section result" id="aiResult">أنا مساعد للمعلم: أخطط، أصمم أنشطة، أبني أسئلة، أقترح علاجًا وإثراءً، وأحلل البيانات بعد ربط المنصة بمحرك AI وقاعدة بيانات فعلية.</div></div></section>
+
+<section id="analytics" class="panel"><h1>📊 التحليلات والتنبؤ</h1><div class="grid4"><div class="card"><small>الإتقان العام</small><div class="metric">78%</div></div><div class="card"><small>بحاجة دعم</small><div class="metric">7</div></div><div class="card"><small>للإثراء</small><div class="metric">5</div></div><div class="card"><small>تحسن الشهر</small><div class="metric">+12%</div></div></div><div class="section two"><div class="card"><h2>مؤشرات تنبؤية</h2><p>🔴 4 طلاب: احتمال تعثر مرتفع</p><p>🟡 6 طلاب: يحتاجون متابعة</p><p>🟢 22 طالبًا: مسار مستقر</p></div><div class="card"><h2>أكثر المهارات احتياجًا لإعادة التدريس</h2><p>1. الزخم والتصادمات — 58%</p><p>2. قوانين نيوتن — 65%</p><p>3. الحركة والتسارع — 78%</p></div></div></section>
+
+<section id="calendar" class="panel"><h1>📅 التقويم والمهام</h1><div class="card"><h2>مهام اليوم</h2><div class="list"><div>10:00 ص — تحضير درس قوانين نيوتن</div><div>01:00 م — مراجعة نتائج الاختبار</div><div>04:00 م — إرسال الواجب</div></div><button class="btn" onclick="openModal('إضافة مهمة','يمكن ربط هذا القسم لاحقًا بتقويم حقيقي وإشعارات.')">+ إضافة مهمة</button></div></section>
+
+<section id="library" class="panel"><h1>📖 المكتبة الرقمية</h1><div class="card"><input placeholder="ابحث في كتبك وملفاتك ومصادرك..."><div class="tools"><div class="tool">📕<div>كتب المنهج</div></div><div class="tool">📘<div>أدلة المعلم</div></div><div class="tool">📄<div>ملفات PDF</div></div><div class="tool">🎞️<div>فيديوهات</div></div></div><p class="muted">ميزة متقدمة مقترحة: RAG لطرح الأسئلة على ملفات المعلم مع إظهار مصدر الإجابة.</p></div></section>
+
+<section id="reports" class="panel"><h1>📄 التقارير والشهادات</h1><div class="tools"><div class="tool" onclick="openModal('تقرير الفصل','تقرير تحصيلي شامل مع مؤشرات الإتقان والتوصيات.')">📊<div>تقرير فصل</div></div><div class="tool" onclick="openModal('تقرير طالب','ملف إنجاز ومهارات ونقاط قوة واحتياج.')">👤<div>تقرير طالب</div></div><div class="tool" onclick="openModal('شهادة','إنشاء شهادة قابلة للطباعة.')">🏆<div>شهادة</div></div><div class="tool" onclick="openModal('خطة علاجية','خطة مبنية على المهارات غير المتقنة.')">🩹<div>خطة علاج</div></div></div></section>
+
+<section id="communication" class="panel"><h1>💬 التواصل</h1><div class="two"><div class="card"><h2>رسائل أولياء الأمور</h2><textarea placeholder="اكتب رسالة..."></textarea><button class="btn">إرسال تجريبي</button></div><div class="card"><h2>قوالب ذكية</h2><div class="list"><div>إشعار انخفاض مستوى</div><div>إشادة بالتميز</div><div>دعوة لمتابعة الواجب</div><div>ترشيح للإثراء</div></div></div></div></section>
+
+<section id="talent" class="panel"><h1>⭐ الموهبة وSTEM</h1><div class="grid4"><div class="card"><small>طلاب موهوبون</small><div class="metric">5</div></div><div class="card"><small>مشاريع STEM</small><div class="metric">3</div></div><div class="card"><small>تحديات مكتملة</small><div class="metric">18</div></div><div class="card"><small>مرشحون لمسابقات</small><div class="metric">4</div></div></div><div class="section card"><button class="btn" onclick="openModal('تحدي موهبة','مشكلة علمية مفتوحة + فرضية + تجربة + تحليل بيانات + عرض النتائج.')">✨ إنشاء تحدٍ</button></div></section>
+
+<section id="development" class="panel"><h1>👨‍🏫 التطوير المهني</h1><div class="card"><h2>مسارك المقترح</h2><div class="list"><div>الذكاء الاصطناعي في التخطيط — 80%</div><div>التقويم التكويني — 60%</div><div>التعليم المتمايز — 45%</div><div>تصميم أنشطة STEM — 35%</div></div></div></section>
+
+<section id="settings" class="panel"><h1>⚙️ الإعدادات والصلاحيات</h1><div class="card"><div class="formgrid"><div><label>اسم المعلم</label><input value="علي طاهر البقاشي"></div><div><label>المدرسة</label><input value="مدرسة أبي الدرداء المتوسطة"></div><div><label>الوضع</label><select><option>فاتح</option><option>داكن</option></select></div><div><label>دور المستخدم</label><select><option>معلم</option><option>قائد مدرسة</option><option>مشرف تربوي</option><option>مدير نظام</option></select></div></div><button class="btn">حفظ الإعدادات</button></div></section>
+
+<div class="footer">منصة المعلم الذكي • نموذج أولي متقدم • قابل للربط بقاعدة بيانات ومحركات ذكاء اصطناعي حقيقية</div>
+</main></div>
+
+<div class="modal" id="modal"><div class="modalbox"><button class="close" onclick="closeModal()">✕</button><h2 id="modalTitle"></h2><div id="modalBody" class="result"></div></div></div>
+<script>
+const btns=document.querySelectorAll('.nav button');
+btns.forEach(b=>b.onclick=()=>go(b.dataset.page));
+function go(id){document.querySelectorAll('.panel').forEach(p=>p.classList.remove('active'));document.getElementById(id).classList.add('active');btns.forEach(b=>b.classList.toggle('active',b.dataset.page===id));scrollTo(0,0)}
+function openModal(t,b){modalTitle.textContent=t;modalBody.textContent=b;modal.classList.add('open')}function closeModal(){modal.classList.remove('open')}
+function plan(){let t=pTopic.value,s=pStrategy.value,tm=pTime.value;planResult.textContent=`خطة درس: ${t}\\nالمدة: ${tm}\\nالاستراتيجية: ${s}\\n\\nالأهداف:\\n• يعرّف الطالب المفهوم ويطبقه.\\n• يفسر النتائج بالأدلة.\\n\\nسير الحصة:\\n1) تمهيد محفز — 5 دقائق.\\n2) استقصاء/تعاون — 12 دقيقة.\\n3) بناء المفهوم — 10 دقائق.\\n4) تطبيق متدرج — 8 دقائق.\\n5) تقويم تكويني — 5 دقائق.\\n6) بطاقة خروج — 5 دقائق.\\n\\nالتمايز:\\nدعم: خطوات إرشادية ومثال مبسط.\\nإثراء: سؤال تفكير أعلى.\\nموهوبون: تحدي STEM.\\n\\nالواجب: مهمة قصيرة قابلة للقياس.`}
+function generateContent(){contentResult.textContent=`تم إعداد مسودة ${contentType.value} عن «${contentTopic.value}».\\n\\nالمكونات: هدف تعلم + تمهيد + محتوى + نشاط + أسئلة تفكير + تقويم + تمايز.\\n\\nالتعليمات: ${contentNotes.value||'لا توجد تعليمات إضافية'}.\\n\\nالإصدار المتقدم يمكنه توليد الملف النهائي بصيغة PowerPoint/PDF أو سيناريو فيديو.`}
+function generateTest(){let n=Math.min(Number(testCount.value)||10,15),t=testTopic.value,q=[];for(let i=1;i<=n;i++)q.push(`${i}. سؤال ${i} حول ${t}: اختر الإجابة الأدق.\\nأ) خيار أول  ب) خيار ثانٍ  ج) خيار ثالث  د) خيار رابع`);testResult.textContent=`اختبار ${testType.value} — ${t}\\n\\n`+q.join('\\n\\n')+'\\n\\nمفتاح الإجابة وتحليل مستويات بلوم وجدول المواصفات تُولد تلقائيًا عند ربط محرك AI.'}
+function aiPrompt(x){aiInput.value=x}
+function askAI(){let x=aiInput.value.trim()||'حلل أداء الطلاب واقترح تدخلاً تعليمياً';aiResult.textContent=`تحليل المساعد الذكي للطلب: «${x}»\\n\\nاقتراح أولي:\\n1) تحديد الهدف التعليمي.\\n2) اختيار نشاط مناسب للمستوى.\\n3) تطبيق تقويم تكويني.\\n4) تحليل الإجابات.\\n5) إنشاء مسار علاجي أو إثرائي.\\n\\nملاحظة: الربط الفعلي بنموذج AI سيجعل هذه الاستجابة ديناميكية.`}
+globalSearch.addEventListener('keydown',e=>{if(e.key==='Enter'){let q=globalSearch.value;openModal('نتيجة البحث',`تم البحث عن: ${q}\\n\\nسيبحث الإصدار المتصل في الدروس والطلاب والملفات والاختبارات والأنشطة.`)}})
+
+const STUDENT_KEY='smart_teacher_students_v1';
+function defaultStudents(){return[
+{name:'سلمان محمد',id:'1001',grade:'ثالث متوسط',cls:'أ',mastery:45},
+{name:'علي السويلم',id:'1002',grade:'ثالث متوسط',cls:'أ',mastery:50},
+{name:'جاسم الحماد',id:'1003',grade:'ثالث متوسط',cls:'أ',mastery:55},
+{name:'أحمد طالب',id:'1004',grade:'ثالث متوسط',cls:'أ',mastery:96}]}
+function getStudents(){try{return JSON.parse(localStorage.getItem(STUDENT_KEY))||defaultStudents()}catch(e){return defaultStudents()}}
+function saveStudents(a){localStorage.setItem(STUDENT_KEY,JSON.stringify(a))}
+function classify(m){return m<60?'علاجي':m>=90?'إثرائي':'مسار الصف'}
+function addStudent(){let n=newStudentName.value.trim();if(!n){alert('اكتب اسم الطالب');return}let a=getStudents();a.push({name:n,id:newStudentId.value.trim()||String(Date.now()),grade:newStudentGrade.value||'ثالث متوسط',cls:newStudentClass.value,mastery:0});saveStudents(a);newStudentName.value='';newStudentId.value='';renderStudents()}
+function renderStudents(){let a=getStudents(),q=(studentSearch?.value||'').trim(),f=a.filter(s=>s.name.includes(q)||String(s.id).includes(q));studentsBody.innerHTML=f.map((s)=>`<tr><td><b>${s.name}</b></td><td>${s.id}</td><td>${s.grade}</td><td>${s.cls}</td><td>${s.mastery}%</td><td><span class="badge ${s.mastery<60?'bad':s.mastery<90?'warn':''}">${classify(s.mastery)}</span></td><td><button class="btn light" onclick="studentProfile('${s.id}')">ملف الطالب</button></td></tr>`).join('');studentTotal.textContent=a.length;studentAvg.textContent=(a.length?Math.round(a.reduce((x,s)=>x+Number(s.mastery||0),0)/a.length):0)+'%';studentSupport.textContent=a.filter(s=>s.mastery<60).length;studentEnrich.textContent=a.filter(s=>s.mastery>=90).length}
+function studentProfile(id){let s=getStudents().find(x=>x.id==id);openModal('ملف الطالب: '+s.name,`رقم الطالب: ${s.id}\nالصف: ${s.grade} — الفصل: ${s.cls}\nالإتقان: ${s.mastery}%\nالتصنيف: ${classify(s.mastery)}\n\nالتوصية: ${s.mastery<60?'خطة علاجية + نشاط قصير + إعادة تقويم.':s.mastery>=90?'إثراء + تحدي STEM + تفكير أعلى.':'تدريب إضافي ومتابعة.'}`)}
+function importStudents(){let f=excelFile.files[0];if(!f){alert('اختر ملف Excel');return}let r=new FileReader();r.onload=e=>{try{let rows;if(f.name.toLowerCase().endsWith('.csv')){rows=new TextDecoder().decode(e.target.result).split(/\r?\n/).filter(Boolean).map(x=>x.split(','));let h=rows.shift();rows=rows.map(x=>Object.fromEntries(h.map((k,i)=>[k,x[i]||''])))}else{if(typeof XLSX==='undefined')throw Error('مكتبة Excel غير متاحة؛ افتح المنصة مع اتصال بالإنترنت.');let wb=XLSX.read(e.target.result,{type:'array'});rows=XLSX.utils.sheet_to_json(wb.Sheets[wb.SheetNames[0]],{defval:''})}let pick=(o,a)=>{let k=Object.keys(o).find(k=>a.some(x=>k.replace(/\s/g,'').includes(x)));return k?o[k]:''};let inc=rows.map(o=>({name:String(pick(o,['اسمالطالب','الاسم','name'])).trim(),id:String(pick(o,['رقمالطالب','الرقم','id'])).trim()||String(Date.now()+Math.random()),grade:String(pick(o,['الصف','grade'])).trim()||'ثالث متوسط',cls:String(pick(o,['الفصل','الشعبة','class'])).trim()||'أ',mastery:Number(pick(o,['الإتقان','الاتقان','mastery']))||0})).filter(x=>x.name);let a=getStudents(),ids=new Set(a.map(x=>x.id));inc.forEach(x=>{if(!ids.has(x.id))a.push(x)});saveStudents(a);renderStudents();importStatus.textContent=`تم استيراد ${inc.length} طالبًا. إجمالي القائمة: ${a.length}.`}catch(err){importStatus.textContent='تعذر الاستيراد: '+err.message}};r.readAsArrayBuffer(f)}
+if('serviceWorker' in navigator)addEventListener('load',()=>navigator.serviceWorker.register('sw.js').catch(()=>{}));
+addEventListener('DOMContentLoaded',renderStudents);
+</script>
+</body></html>
